@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Generate Questions</title>
+</head>
+<body>
+
+    <section class="main">
+        <div class="container">
+            <div class="header">
+                <h1><i class="fas fa-file-code"></i> HTML Quiz Generator</h1>
+                <p>Transform your JSON questions into interactive HTML quizzes</p>
+            </div>
+            
+            <div class="content">
+                <div class="input-group">
+                    <div class="generator-selector">
+                        <label for="generator-type">Select Generator Type:</label>
+                        <select id="generator-type">
+                            <option value="choices">💬 Choices Quiz</option>
+                            <option value="paragraph_reorder">📜 Paragraph Reorder</option>
+                            <option value="reading_comprehension">📘 Reading Comprehension </option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-header">
+                        <h2>Your Questions (JSON Format)</h2>
+                    </div>
+
+                    <textarea class="json-input" id="json-input" placeholder='[ (Json Here) ]'></textarea>
+                    
+                    <div class="actions">
+                        <button class="generate-btn" id="generate-btn">
+                            Generate HTML File
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="example-section">
+                    <h3><i class="fas fa-lightbulb"></i> Example Format</h3>
+                    <pre><code id="example-code"></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
