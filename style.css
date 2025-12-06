@@ -52,7 +52,7 @@ body {
 .header {
     background: var(--gradient-primary);
     color: white;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -117,29 +117,34 @@ body {
     gap: 6px;
 }
 
-.json-input {
+textarea, input {
     width: 100%;
-    min-height: 300px;
     padding: 20px;
     font-size: 1rem;
+    margin-bottom: 10px;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     border: 2px solid var(--border);
     border-radius: 12px;
-    resize: vertical;
-    line-height: 1.5;
     background: #fafbfc;
     color: var(--text-primary);
     transition: border 0.3s ease;
 }
 
-.json-input:focus {
+textarea {
+    min-height: 300px;
+    resize: vertical;
+    line-height: 1.5;
+    font-size: .9rem;
+}
+
+:is(textarea, input):focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
     background: white;
 }
 
-.json-input::placeholder {
+:is(textarea, input)::placeholder {
     color: var(--text-secondary);
 }
 
@@ -182,10 +187,11 @@ body {
     margin-bottom: 20px;
 }
 
-.generator-selector label {
+label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
+    font-size: 18px;
     color: var(--dark);
 }
 
