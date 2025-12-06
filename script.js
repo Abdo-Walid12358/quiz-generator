@@ -3658,7 +3658,6 @@ function generateSnakeLadderHTML(questions, titleValue){
     }
     
     function updateQuestionBar() {
-    alert("LOL"); //LOL
         if (currentQuestionIndex === -1) {
             // Random mode - pick a random question that hasn't been used recently
             let availableQuestions = questions.filter((_, index) => !usedQuestions.has(index));
