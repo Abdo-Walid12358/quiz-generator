@@ -3673,7 +3673,7 @@ function generateSnakeLadderHTML(questions, titleValue){
             const q = availableQuestions[randomIndex];
             
             // Update the question bar immediately
-            dom.questionText.textContent = q.q; 
+            dom.questionText.textContent = (currentQuestionIndex + 1) + '. ' + q.q; 
             dom.optionsContainer.innerHTML = '';
             q.o.forEach((option, index) => {
                 const button = document.createElement('button');
@@ -3690,7 +3690,7 @@ function generateSnakeLadderHTML(questions, titleValue){
             const q = questions[currentQuestionIndex];
             
             // Update the question bar immediately
-            dom.questionText.textContent = q.q; 
+            dom.questionText.textContent = (currentQuestionIndex + 1) + '. ' + q.q; 
             dom.optionsContainer.innerHTML = '';
             q.o.forEach((option, index) => {
                 const button = document.createElement('button');
